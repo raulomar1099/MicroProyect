@@ -39,8 +39,3 @@ Github
 Amazon Web Services (AWS Cloud Server)
 
 MQTT Broker
-
-# Dashboard in Node-Red
-
-<img src='![Screenshot 2022-12-12 161002](https://user-images.githubusercontent.com/111936852/207144361-e6ad156d-2a85-4e03-9da6-5400257522d7.png)
- ' width='70%'/>
