@@ -1,0 +1,1629 @@
+[
+    {
+        "id": "d1383a0e45af9878",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "81c13bd7cb13fa22",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0904705d12f8aa00",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "54.175.97.105",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "2",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "2",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "2",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "570bac5c36348a27",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ce3b1287cbba938d",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "dbb8db340d1f79fd",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "95728e14aa40abaf",
+        "type": "ui_group",
+        "name": "Room 2",
+        "tab": "dbb8db340d1f79fd",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "25089e6f2af16870",
+        "type": "mongodb",
+        "hostname": "127.0.0.1",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "mqtt",
+        "name": ""
+    },
+    {
+        "id": "dbb8db340d1f79fd",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "775ca523c5b5d755",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Is the AC ON?",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d7c4c1f9c8a0678e",
+        "type": "websocket-listener",
+        "path": "/temp_room1",
+        "wholemsg": "false"
+    },
+    {
+        "id": "b307a99e246738d4",
+        "type": "websocket-client",
+        "path": "inovazzion.space:1880/temp_room1",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "fb5703e2804111f1",
+        "type": "aedes broker",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d8495e07a0c91744",
+        "type": "http in",
+        "z": "d1383a0e45af9878",
+        "d": true,
+        "name": "",
+        "url": "/celcius ",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1400,
+        "wires": [
+            [
+                "9a02fd5ff5d4ef51"
+            ]
+        ]
+    },
+    {
+        "id": "9a02fd5ff5d4ef51",
+        "type": "function",
+        "z": "d1383a0e45af9878",
+        "d": true,
+        "name": "function 3",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "305637528842a2ea",
+        "type": "http response",
+        "z": "d1383a0e45af9878",
+        "d": true,
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "b891729e2b861da8",
+        "type": "unit-converter",
+        "z": "d1383a0e45af9878",
+        "category": "temperature",
+        "inputUnit": "F",
+        "outputUnit": "C",
+        "inputField": "payload",
+        "outputField": "payload",
+        "inputFieldType": "msg",
+        "outputFieldType": "msg",
+        "roundOutputField": true,
+        "outputFieldDecimals": 2,
+        "statusType": "none",
+        "name": "",
+        "x": 400,
+        "y": 340,
+        "wires": [
+            [
+                "2595befc496cfa8a",
+                "27642c0806d8bba2"
+            ]
+        ]
+    },
+    {
+        "id": "451fdb3fa3174da5",
+        "type": "mqtt in",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "topic": "room1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0904705d12f8aa00",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "2ab2db46b6c433a4",
+                "e7b2317d136c478a",
+                "b891729e2b861da8",
+                "5fdbe324a5c9abbe",
+                "7ad97fcb23ddebba"
+            ]
+        ]
+    },
+    {
+        "id": "e7b2317d136c478a",
+        "type": "ui_chart",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "group": "ce3b1287cbba938d",
+        "order": 9,
+        "width": "5",
+        "height": "5",
+        "label": "Room 1 (F°)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ab2db46b6c433a4",
+        "type": "ui_gauge",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "group": "ce3b1287cbba938d",
+        "order": 5,
+        "width": "5",
+        "height": "5",
+        "gtype": "donut",
+        "title": "Room 1 (F°)",
+        "label": "F°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "33",
+        "seg2": "66",
+        "className": "",
+        "x": 490,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "27642c0806d8bba2",
+        "type": "ui_chart",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "group": "ce3b1287cbba938d",
+        "order": 9,
+        "width": "5",
+        "height": "5",
+        "label": "Room 1 (C°)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2595befc496cfa8a",
+        "type": "ui_gauge",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "group": "ce3b1287cbba938d",
+        "order": 5,
+        "width": "5",
+        "height": "5",
+        "gtype": "donut",
+        "title": "Room 1 (C°)",
+        "label": "C°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "13",
+        "seg2": "13",
+        "className": "",
+        "x": 630,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4aa7fa29bdf74564",
+        "type": "mqtt in",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "topic": "room2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0904705d12f8aa00",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 1000,
+        "wires": [
+            [
+                "05fc59a86d8dab78",
+                "0e448a6e12de0d44",
+                "c6096805e246ce5e",
+                "52ca650706a5eb23",
+                "78a598691b7066d8"
+            ]
+        ]
+    },
+    {
+        "id": "c6096805e246ce5e",
+        "type": "unit-converter",
+        "z": "d1383a0e45af9878",
+        "category": "temperature",
+        "inputUnit": "F",
+        "outputUnit": "C",
+        "inputField": "payload",
+        "outputField": "payload",
+        "inputFieldType": "msg",
+        "outputFieldType": "msg",
+        "roundOutputField": true,
+        "outputFieldDecimals": 2,
+        "statusType": "none",
+        "name": "",
+        "x": 380,
+        "y": 980,
+        "wires": [
+            [
+                "822b609a3517aedd",
+                "4192b7d24043230a"
+            ]
+        ]
+    },
+    {
+        "id": "0e448a6e12de0d44",
+        "type": "ui_chart",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "group": "95728e14aa40abaf",
+        "order": 9,
+        "width": "5",
+        "height": "5",
+        "label": "Room 2 (F°)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05fc59a86d8dab78",
+        "type": "ui_gauge",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "group": "95728e14aa40abaf",
+        "order": 5,
+        "width": "5",
+        "height": "5",
+        "gtype": "donut",
+        "title": "Room 2 (F°)",
+        "label": "F°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "33",
+        "seg2": "66",
+        "className": "",
+        "x": 470,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "4192b7d24043230a",
+        "type": "ui_chart",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "group": "95728e14aa40abaf",
+        "order": 9,
+        "width": "5",
+        "height": "5",
+        "label": "Room 2 (C°)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 610,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "822b609a3517aedd",
+        "type": "ui_gauge",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "group": "95728e14aa40abaf",
+        "order": 5,
+        "width": "5",
+        "height": "5",
+        "gtype": "donut",
+        "title": "Room 2 (C°)",
+        "label": "C°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "13",
+        "seg2": "13",
+        "className": "",
+        "x": 610,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "646828fa648238cd",
+        "type": "change",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 440,
+        "wires": [
+            [
+                "6b446ea23ac3cbfb"
+            ]
+        ]
+    },
+    {
+        "id": "5fdbe324a5c9abbe",
+        "type": "switch",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "70",
+                "vt": "str"
+            },
+            {
+                "t": "gt",
+                "v": "70",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 460,
+        "wires": [
+            [
+                "646828fa648238cd"
+            ],
+            [
+                "274a59fd8ca37ae0"
+            ]
+        ]
+    },
+    {
+        "id": "274a59fd8ca37ae0",
+        "type": "change",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 480,
+        "wires": [
+            [
+                "6b446ea23ac3cbfb"
+            ]
+        ]
+    },
+    {
+        "id": "ca62a8bb07b24290",
+        "type": "change",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 1080,
+        "wires": [
+            [
+                "dab031e04118defd"
+            ]
+        ]
+    },
+    {
+        "id": "52ca650706a5eb23",
+        "type": "switch",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "70",
+                "vt": "str"
+            },
+            {
+                "t": "gt",
+                "v": "70",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 270,
+        "y": 1100,
+        "wires": [
+            [
+                "ca62a8bb07b24290"
+            ],
+            [
+                "9dad5ec9ba089ea4"
+            ]
+        ]
+    },
+    {
+        "id": "9dad5ec9ba089ea4",
+        "type": "change",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 1120,
+        "wires": [
+            [
+                "dab031e04118defd"
+            ]
+        ]
+    },
+    {
+        "id": "6b446ea23ac3cbfb",
+        "type": "ui_text",
+        "z": "d1383a0e45af9878",
+        "group": "ce3b1287cbba938d",
+        "order": 6,
+        "width": "10",
+        "height": "1",
+        "name": "",
+        "label": "The A/C in Room 1 is:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "dab031e04118defd",
+        "type": "ui_text",
+        "z": "d1383a0e45af9878",
+        "group": "95728e14aa40abaf",
+        "order": 6,
+        "width": "10",
+        "height": "1",
+        "name": "",
+        "label": "The A/C in Room 2 is:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 660,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "e86eaf034d46f3e7",
+        "type": "http response",
+        "z": "d1383a0e45af9878",
+        "d": true,
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "79b9f26fe9d79a6c",
+        "type": "function",
+        "z": "d1383a0e45af9878",
+        "name": "function 9",
+        "func": "var siri_room1 = msg.payload;\n\nif(msg.payload<=90){\n    msg.payload = \"Is the AC of room one is ON\";\n}\nelse { \n    msg.payload =  \"Is the AC of room one OFF\";\n    }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 620,
+        "wires": [
+            [
+                "d06aaf73dad59dac"
+            ]
+        ]
+    },
+    {
+        "id": "b2ed106f8aeb9e7c",
+        "type": "http in",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "url": "/temp_room2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 1200,
+        "wires": [
+            [
+                "78a598691b7066d8"
+            ]
+        ]
+    },
+    {
+        "id": "93ab0f643f5a1f71",
+        "type": "http response",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "78a598691b7066d8",
+        "type": "function",
+        "z": "d1383a0e45af9878",
+        "name": "function 10",
+        "func": "var room2 = msg.payload;\nif(msg.payload<70){\n\nmsg.payload = {\"Is the AC of room two ON\": \"YES\"};\n\n}\n\nelse { msg.payload = { \"Is the AC of room two ON\": \"NO\"};}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1200,
+        "wires": [
+            [
+                "93ab0f643f5a1f71"
+            ]
+        ]
+    },
+    {
+        "id": "86012c643dfe1387",
+        "type": "change",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"It is\": \"ON\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 700,
+        "wires": [
+            [
+                "9a478d4903b3c133"
+            ]
+        ]
+    },
+    {
+        "id": "3e33e25aa8447706",
+        "type": "switch",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "90",
+                "vt": "str"
+            },
+            {
+                "t": "gt",
+                "v": "90",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 720,
+        "wires": [
+            [
+                "86012c643dfe1387"
+            ],
+            [
+                "a6c920d1ab161fea"
+            ]
+        ]
+    },
+    {
+        "id": "a6c920d1ab161fea",
+        "type": "change",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"It is\": \"OFF\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 740,
+        "wires": [
+            [
+                "ab0224882730dd56"
+            ]
+        ]
+    },
+    {
+        "id": "93e8780a601379f9",
+        "type": "http response",
+        "z": "d1383a0e45af9878",
+        "d": true,
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "03af7fc3d17be6dd",
+        "type": "http in",
+        "z": "d1383a0e45af9878",
+        "d": true,
+        "name": "",
+        "url": "/temp_room1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 720,
+        "wires": [
+            [
+                "3e33e25aa8447706"
+            ]
+        ]
+    },
+    {
+        "id": "9a478d4903b3c133",
+        "type": "function",
+        "z": "d1383a0e45af9878",
+        "name": "function 11",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 700,
+        "wires": [
+            [
+                "e86eaf034d46f3e7"
+            ]
+        ]
+    },
+    {
+        "id": "ab0224882730dd56",
+        "type": "function",
+        "z": "d1383a0e45af9878",
+        "name": "function 12",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 740,
+        "wires": [
+            [
+                "93e8780a601379f9"
+            ]
+        ]
+    },
+    {
+        "id": "7ad97fcb23ddebba",
+        "type": "file",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "filename": "siri_room1",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 310,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7593e8b2b0f25431",
+        "type": "http in",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "url": "/temp_room1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "a92de4818366fb83"
+            ]
+        ]
+    },
+    {
+        "id": "a92de4818366fb83",
+        "type": "file in",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "filename": "siri_room1",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "79b9f26fe9d79a6c"
+            ]
+        ]
+    },
+    {
+        "id": "d06aaf73dad59dac",
+        "type": "http response",
+        "z": "d1383a0e45af9878",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "837a4c71aef18b03",
+        "type": "aedes broker",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 250,
+        "y": 40,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9a8549129c25f0f4",
+        "type": "mqtt in",
+        "z": "81c13bd7cb13fa22",
+        "name": "Celsius",
+        "topic": "Temperature/Celsius",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "570bac5c36348a27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "b39a59eaf10dd1ce",
+                "e548a106d1c6b36a"
+            ]
+        ]
+    },
+    {
+        "id": "b39a59eaf10dd1ce",
+        "type": "function",
+        "z": "81c13bd7cb13fa22",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "0340253fc8f2fb8f",
+                "79c71d58aa6f394e"
+            ]
+        ]
+    },
+    {
+        "id": "0340253fc8f2fb8f",
+        "type": "ui_gauge",
+        "z": "81c13bd7cb13fa22",
+        "name": "Celsius",
+        "group": "ce3b1287cbba938d",
+        "order": 1,
+        "width": "12",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Degrees",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "38",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "79c71d58aa6f394e",
+        "type": "ui_chart",
+        "z": "81c13bd7cb13fa22",
+        "name": "Celsius",
+        "group": "ce3b1287cbba938d",
+        "order": 2,
+        "width": "12",
+        "height": "5",
+        "label": "Degrees",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 640,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6be8c91e571e635a",
+        "type": "mqtt in",
+        "z": "81c13bd7cb13fa22",
+        "name": "Fahrenheit",
+        "topic": "Temperature/Fahrenheit",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "570bac5c36348a27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "96e8c59de117e20e",
+                "d323555429af29aa"
+            ]
+        ]
+    },
+    {
+        "id": "96e8c59de117e20e",
+        "type": "function",
+        "z": "81c13bd7cb13fa22",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "9c07a59bb4c23289",
+                "262a256c51883f59"
+            ]
+        ]
+    },
+    {
+        "id": "9c07a59bb4c23289",
+        "type": "ui_gauge",
+        "z": "81c13bd7cb13fa22",
+        "name": "Fahrenheit",
+        "group": "95728e14aa40abaf",
+        "order": 1,
+        "width": "12",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Degrees",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 650,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "262a256c51883f59",
+        "type": "ui_chart",
+        "z": "81c13bd7cb13fa22",
+        "name": "Fahrenheit",
+        "group": "95728e14aa40abaf",
+        "order": 2,
+        "width": "12",
+        "height": "5",
+        "label": "Degrees",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5e0c5da1984cbec",
+        "type": "mongodb out",
+        "z": "81c13bd7cb13fa22",
+        "mongodb": "25089e6f2af16870",
+        "name": "Insert Fahrenheit",
+        "collection": "Fahrenheit",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 850,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cbae457a09a78dac",
+        "type": "http in",
+        "z": "81c13bd7cb13fa22",
+        "name": "Celsius",
+        "url": "/Celsius",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "35eb35e8ed02526a"
+            ]
+        ]
+    },
+    {
+        "id": "f9b6f61480a5baff",
+        "type": "mongodb out",
+        "z": "81c13bd7cb13fa22",
+        "mongodb": "25089e6f2af16870",
+        "name": "Insert Celcius",
+        "collection": "Celcius",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 840,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e1851ccd886525ac",
+        "type": "template",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "The temperature is {{payload}}C",
+        "output": "str",
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "74d8d25e501f25d9"
+            ]
+        ]
+    },
+    {
+        "id": "e548a106d1c6b36a",
+        "type": "file",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "filename": "Celsius",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 400,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35eb35e8ed02526a",
+        "type": "file in",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "filename": "Celsius",
+        "filenameType": "str",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 400,
+        "y": 460,
+        "wires": [
+            [
+                "e1851ccd886525ac"
+            ]
+        ]
+    },
+    {
+        "id": "74d8d25e501f25d9",
+        "type": "http response",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d323555429af29aa",
+        "type": "file",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "filename": "Fahrenheit",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 410,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8419f83b6f47d93",
+        "type": "http in",
+        "z": "81c13bd7cb13fa22",
+        "name": "Fahrenheit",
+        "url": "/Fahrenheit",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "e39d659ced513943"
+            ]
+        ]
+    },
+    {
+        "id": "1efa09d46117a551",
+        "type": "template",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "The temperature is {{payload}}F",
+        "output": "str",
+        "x": 600,
+        "y": 500,
+        "wires": [
+            [
+                "b4bd291d17dd4edc"
+            ]
+        ]
+    },
+    {
+        "id": "e39d659ced513943",
+        "type": "file in",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "filename": "Fahrenheit",
+        "filenameType": "str",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "1efa09d46117a551"
+            ]
+        ]
+    },
+    {
+        "id": "b4bd291d17dd4edc",
+        "type": "http response",
+        "z": "81c13bd7cb13fa22",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 500,
+        "wires": []
+    }
+]
