@@ -5,19 +5,24 @@
 #include "freertos/task.h"
 #include <PubSubClient.h>
 #include <driver/adc.h>
+//LIBRARIES FOR DISPLAY
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_SSD1306.h>
 
 //*******************//
-//****** TEMP CONFIGURATION *******//
+//***** DISPLAY CONFIGURATION *******//
 //*******************//
-#define PIN_ANALOG_IN   33
 #define OLED_MOSI 23
 #define OLED_CLK 18
 #define OLED_DC 3
 #define OLED_CS 5
 #define OLED_RESET 1
+
+//*******************//
+//****** TEMP CONFIGURATION *******//
+//*******************//
+#define PIN_ANALOG_IN   33
 int adcValue ;
 double voltage ;
 double Rt ;
@@ -25,7 +30,10 @@ double tempK ;
 double tempC ;
 double tempf ;          
 
-//*****Calibration Variable*****//
+//*******************//
+//****** CALIBRATION VARIABLE *******//
+//*******************//
+
 double Calibration_vC = 5.79;
 double Calibration_vF = 8.4;
 
@@ -44,8 +52,7 @@ const char *mqtt_user = "INOVA_USER";
 const char *mqtt_pass = "INOVA";
 const char *root_topic_subscribe = "room2";
 const char *root_topic_publish = "room2";
-const char *root_topic_subscribe2 = "room2C";
-const char *root_topic_publish2 = "room2C";
+
 //*******************//
 //******* GLOBAL **********//
 //*******************//
@@ -59,18 +66,19 @@ long count=0;
 //*******************//
 //******* FUNCTIONS *********//
 //*******************//
-void callback(char* topic, byte* payload, unsigned int length);
-void reconnect();
-void setup_wifi();
+//void callback(char* topic, byte* payload, unsigned int length);
+
+void mqtt_reconnect();
+void wifi_setup();
 
 void setup() {
   Serial.begin(115200);
-  setup_wifi();
+  wifi_setup();
   client.setServer(mqtt_server, mqtt_port);
-  client.setCallback(callback);
+  //client.setCallback(callback);
 
   
-  //***Display*******//
+  //**Display**//
 
  display.begin(SSD1306_SWITCHCAPVCC); // Inicia el display OLED
  display.clearDisplay(); // Borrar imagen en el OLED
@@ -93,7 +101,7 @@ void setup() {
 void loop() {
   
   if (!client.connected()) {
-		reconnect();
+		mqtt_reconnect();
 	}
 
   if (client.connected()){
@@ -106,8 +114,27 @@ void loop() {
     tempK = 1 / (1 / (273.15 + 25) + log(Rt / 10) / 3950.0); //calculate tempera0ture (Kelvin)
     tempC = (tempK - 273.15) - Calibration_vC;               //calculate temperature (Celsius)
     tempf = (1.8 * (tempK - 273.15) + 32) - Calibration_vF;  // calculate temp (fahrenheit)
-    
+    Serial.printf("ADC value : %d,\tVoltage : %.2fV, \tTemperature : %.2fC, \tTemp fa: %.1fF\n", adcValue, voltage, tempC, tempf);
 
+    //TEMPERATURE MOVING AVERAGE
+    /*
+    for(counter=0; counter<moving_avg_period ; counter++){
+
+      adcValue = analogRead(PIN_ANALOG_IN);
+      mov_avg_arr[counter]= (float)adcValue;
+    
+    }
+
+    for(counter=1; counter<=moving_avg_period ; counter++){
+
+        sum = sum + mov_avg_arr[counter-1];
+        mov_avg = sum / counter;
+        Serial.printf("\nmov_acv: %d",mov_avg);
+
+    }
+    */
+
+    //DISPLAY DATA CONFIGURATION
     display.clearDisplay(); 
     display.setTextSize(1);
     display.setCursor(0, 0);       
@@ -124,12 +151,11 @@ void loop() {
     display.println("F");
     display.display(); 
     delay(500); 
+
+    //TEMPERATURE PUBLISHING
     
     snprintf(msg, 16, "%.2f", tempf);
     client.publish(root_topic_publish, msg);
-    snprintf(msg2, 16, "%.2f", tempC);
-    client.publish(root_topic_publish2, msg2);
-
     
     delay(1000);
   }
@@ -140,11 +166,11 @@ void loop() {
 //*******************//
 //****** WIFI CONNECTION ********//
 //*******************//
-void setup_wifi(){
+void wifi_setup(){
 	delay(10);
-	// Nos conectamos a nuestra red Wifi
+	// WE CONNECT TO OUR WIFI 
 	Serial.println();
-	Serial.print("Conectando a ssid: ");
+	Serial.print("Connecting to ssid: ");
 	Serial.println(ssid);
 
 	WiFi.begin(ssid, password);
@@ -155,57 +181,44 @@ void setup_wifi(){
 	}
 
 	Serial.println("");
-	Serial.println("Conectado a red WiFi!");
-	Serial.println("Dirección IP: ");
+	Serial.println("Connected to WiFi!");
+	Serial.println("IP Address: ");
 	Serial.println(WiFi.localIP());
 }
 
 //*******************//
 //****** MQTT CONNECTION ********//
 //*******************//
-void reconnect() {
+void mqtt_reconnect() {
 
 	while (!client.connected()) {
-		Serial.print("Intentando conexión Mqtt...");
-		// Creamos un cliente ID
-		String clientId = "IOTICOS_H_W_";
+		Serial.print("Trying MQTT Connection...");
+		// Create Client ID
+		String clientId = "INOVAZZION_H_W_";
 		clientId += String(random(0xffff), HEX);
-		// Intentamos conectar
+		// Try connection
 		if (client.connect(clientId.c_str(),mqtt_user,mqtt_pass)) {
-			Serial.println("Conectado!");
-			// Nos suscribimos
+			Serial.println("CONNECTED!");
+			// Subscription
 			if(client.subscribe(root_topic_subscribe)){
-        Serial.println("Suscripcion ok");
+        Serial.println("SUBSCRIPTION ok");
       }else{
-        Serial.println("fallo Suscripciión");
+        Serial.println("SUBSCRIPTION FAILED");
       }
-		} else {
-			Serial.print("falló :( con error -> ");
-			Serial.print(client.state());
-			Serial.println(" Intentamos de nuevo en 5 segundos");
-			delay(5000);
-		}
-    if (client.connect(clientId.c_str(),mqtt_user,mqtt_pass)) {
-			Serial.println("Conectado!");
-			// Nos suscribimos
-			if(client.subscribe(root_topic_subscribe2)){
-        Serial.println("Suscripcion ok");
-      }else{
-        Serial.println("fallo Suscripciión");
-      }
-		} else {
-			Serial.print("falló :( con error -> ");
-			Serial.print(client.state());
-			Serial.println(" Intentamos de nuevo en 5 segundos");
-			delay(5000);
+		    } else {
+			    Serial.print("FAILED :( ERROR ->  ");
+			    Serial.print(client.state());
+			    Serial.println(" TRY AGAIN IN 5 SECONDS");
+			    delay(5000);
+		    }
 		}
 	}
-}
+
 
 //*******************//
 //******* CALLBACK **********//
 //*******************//
-void callback(char* topic, byte* payload, unsigned int length){
+/void callback(char topic, byte* payload, unsigned int length){
 	String incoming = "";
 	Serial.print("Mensaje recibido desde -> ");
 	Serial.print(topic);
@@ -217,3 +230,4 @@ void callback(char* topic, byte* payload, unsigned int length){
 	Serial.println("Mensaje -> " + incoming);
 
 }
+*/
